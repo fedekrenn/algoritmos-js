@@ -10,7 +10,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0"
+    "chai": "4.3.7",
+    "mocha": "10.2.0",
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "globals": {
+      "describe": "readonly",
+      "it": "readonly"
+    },
+    "rules": {
+      "eqeqeq": "off"
+    }
   }
 }

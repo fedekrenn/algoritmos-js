@@ -10,24 +10,24 @@ La calificación de felicidad será la puntuación total dividida por el número
 Ten en cuenta que tu jefe está en la habitación (boss), su puntuación vale el doble de su valor nominal (pero sigue siendo solo una persona).
 */
 
-function outed(meet, boss) {
-  const arrOfMates = Object.entries(meet);
+function outed (meet, boss) {
+  const arrOfMates = Object.entries(meet)
 
   const sum = arrOfMates.reduce((acc, mate) => {
-    return mate[0] == boss ? (acc += mate[1] * 2) : (acc += mate[1]);
-  }, 0);
+    return mate[0] == boss ? (acc += mate[1] * 2) : (acc += mate[1])
+  }, 0)
 
-  return sum / arrOfMates.length >= 5 ? "Nice Work Champ!" : "Get Out Now!";
+  return sum / arrOfMates.length >= 5 ? 'Nice Work Champ!' : 'Get Out Now!'
 }
 
 // TESTS
 
-const chai = require("chai");
-const assert = chai.assert;
-chai.config.truncateThreshold = 0;
+const chai = require('chai')
+const assert = chai.assert
+chai.config.truncateThreshold = 0
 
-describe("Example tests", () => {
-  it("Should pass Example tests", () => {
+describe('Example tests', () => {
+  it('Should pass Example tests', () => {
     assert.strictEqual(
       outed(
         {
@@ -41,12 +41,12 @@ describe("Example tests", () => {
           saajid: 2,
           alex: 3,
           john: 2,
-          mr: 0,
+          mr: 0
         },
-        "laura"
+        'laura'
       ),
-      "Get Out Now!"
-    );
+      'Get Out Now!'
+    )
     assert.strictEqual(
       outed(
         {
@@ -60,12 +60,12 @@ describe("Example tests", () => {
           saajid: 9,
           alex: 9,
           john: 9,
-          mr: 8,
+          mr: 8
         },
-        "katie"
+        'katie'
       ),
-      "Nice Work Champ!"
-    );
+      'Nice Work Champ!'
+    )
     assert.strictEqual(
       outed(
         {
@@ -79,11 +79,11 @@ describe("Example tests", () => {
           saajid: 2,
           alex: 3,
           john: 2,
-          mr: 8,
+          mr: 8
         },
-        "john"
+        'john'
       ),
-      "Get Out Now!"
-    );
-  });
-});
+      'Get Out Now!'
+    )
+  })
+})
