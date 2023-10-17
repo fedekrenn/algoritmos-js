@@ -18,16 +18,10 @@ git clone
 npm install
 ```
 
-3. Posicionarte en la carpeta "ejercicios"
+3. Ejecutar el test para el ejercicio que quieras probar
 
 ```bash
-cd ejercicios
-```
-
-4. Ejecutar el test para el ejercicio que quieras probar
-
-```bash
-npx mocha <nombre-del-ejercicio>.js
+npm run test <nombre-del-ejercicio>.js
 ```
 
 <br>

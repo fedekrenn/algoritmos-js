@@ -4,7 +4,7 @@
   "description": "",
   "main": "cantidad-total-de-puntos.js",
   "scripts": {
-    "test": ""
+    "test": "cd ejercicios && mocha $1"
   },
   "keywords": [],
   "author": "",
