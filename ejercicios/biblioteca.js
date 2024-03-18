@@ -25,22 +25,22 @@ function minAndMaxWord (words) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Min and max word', function () {
+describe('Min and max word', () => {
   const test1 = [999, 255, 121]
 
-  it('Test 1', function () {
+  it('Test 1', () => {
     assert.deepEqual(minAndMaxWord(test1), [2, 0])
   })
 
   const test2 = [2, 1, 3, 4, 5, 6, 7, 8, 9]
 
-  it('Test 2', function () {
+  it('Test 2', () => {
     assert.deepEqual(minAndMaxWord(test2), [1, 8])
   })
 
   const test3 = [5, 10, 15, 20]
 
-  it('Test 3', function () {
+  it('Test 3', () => {
     assert.deepEqual(minAndMaxWord(test3), [0, 3])
   })
 })

@@ -40,8 +40,8 @@ function findLargestElement (matrix) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Encontrar el elemento más grande en una matriz', function () {
-  it('Test 1', function () {
+describe('Encontrar el elemento más grande en una matriz', () => {
+  it('Test 1', () => {
     assert.equal(
       findLargestElement([
         [3, 5, 2],
@@ -52,7 +52,7 @@ describe('Encontrar el elemento más grande en una matriz', function () {
     )
   })
 
-  it('Test 2', function () {
+  it('Test 2', () => {
     assert.equal(
       findLargestElement([
         [1, 2, 3],
@@ -63,7 +63,7 @@ describe('Encontrar el elemento más grande en una matriz', function () {
     )
   })
 
-  it('Test 3', function () {
+  it('Test 3', () => {
     assert.equal(
       findLargestElement([
         [17, 23],

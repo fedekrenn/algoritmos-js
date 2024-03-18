@@ -23,20 +23,20 @@ function calculateChange (ammount) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Vuelto de compra', function () {
-  it('Test 1', function () {
+describe('Vuelto de compra', () => {
+  it('Test 1', () => {
     assert.deepEqual(calculateChange(215), [100, 100, 10, 5])
   })
 
-  it('Test 2', function () {
+  it('Test 2', () => {
     assert.deepEqual(calculateChange(300), [100, 100, 100])
   })
 
-  it('Test 3', function () {
+  it('Test 3', () => {
     assert.deepEqual(calculateChange(10), [10])
   })
 
-  it('Test 4', function () {
+  it('Test 4', () => {
     assert.deepEqual(calculateChange(44), [20, 20, 2, 2])
   })
 })

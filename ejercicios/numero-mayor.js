@@ -33,20 +33,20 @@ function findLargestNumber (matrix) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Encontrar el número mayor en una matriz', function () {
-  it('Test 1', function () {
+describe('Encontrar el número mayor en una matriz', () => {
+  it('Test 1', () => {
     assert.equal(findLargestNumber([[3, 5, 2], [11, 9, 8], [7, 6, 4]]), 11)
   })
 
-  it('Test 2', function () {
+  it('Test 2', () => {
     assert.equal(findLargestNumber([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), 9)
   })
 
-  it('Test 3', function () {
+  it('Test 3', () => {
     assert.equal(findLargestNumber([[17, 23], [42, 3], [7, 8, 19]]), 42)
   })
 
-  it('Test 4', function () {
+  it('Test 4', () => {
     assert.equal(findLargestNumber([[-1, -2, -3], [-4, -5, -6], [-7, -8, -9]]), -1)
   })
 })

@@ -33,16 +33,16 @@ Los test no pueden correrse porque mocha no tiene soporte con el nuevo método d
 String.prototype.toReversed, correrlo en el navegador
 */
 
-describe('Find palindromic substrings', function () {
-  it('Test 1', function () {
+describe('Find palindromic substrings', () => {
+  it('Test 1', () => {
     assert.deepEqual(findPalindromicSubstrings('ababa'), ['a', 'b', 'a', 'b', 'a', 'ababa', 'bab'])
   })
 
-  it('Test 2', function () {
+  it('Test 2', () => {
     assert.deepEqual(findPalindromicSubstrings('racecar'), ['r', 'a', 'c', 'e', 'c', 'a', 'r', 'aceca', 'cec'])
   })
 
-  it('Test 3', function () {
+  it('Test 3', () => {
     assert.deepEqual(findPalindromicSubstrings('Aibofobia'), ['a', 'i', 'b', 'o', 'f', 'o', 'b', 'i', 'a', 'aibofobia', 'ibofobi', 'bofob', 'ofo'])
   })
 })

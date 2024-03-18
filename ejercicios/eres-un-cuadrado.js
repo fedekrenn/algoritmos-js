@@ -29,8 +29,8 @@ const chai = require('chai')
 const assert = chai.assert
 chai.config.truncateThreshold = 0
 
-describe("You're a square!", function () {
-  it('Sample Tests', function () {
+describe("You're a square!", () => {
+  it('Sample Tests', () => {
     assert.strictEqual(
       isSquare(-1),
       false,

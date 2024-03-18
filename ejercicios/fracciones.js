@@ -75,23 +75,23 @@ function gcd (a, b) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Calculadora de Fracciones', function () {
-  it('Test 1: Sumar Fracciones', function () {
+describe('Calculadora de Fracciones', () => {
+  it('Test 1: Sumar Fracciones', () => {
     const resultado = sumarFracciones({ numerador: 1, denominador: 2 }, { numerador: 1, denominador: 3 })
     assert.deepEqual(resultado, { numerador: 5, denominador: 6 })
   })
 
-  it('Test 2: Restar Fracciones', function () {
+  it('Test 2: Restar Fracciones', () => {
     const resultado = restarFracciones({ numerador: 3, denominador: 4 }, { numerador: 1, denominador: 4 })
     assert.deepEqual(resultado, { numerador: 1, denominador: 2 })
   })
 
-  it('Test 3: Multiplicar Fracciones', function () {
+  it('Test 3: Multiplicar Fracciones', () => {
     const resultado = multiplicarFracciones({ numerador: 2, denominador: 3 }, { numerador: 3, denominador: 4 })
     assert.deepEqual(resultado, { numerador: 1, denominador: 2 })
   })
 
-  it('Test 4: Dividir Fracciones', function () {
+  it('Test 4: Dividir Fracciones', () => {
     const resultado = dividirFracciones({ numerador: 3, denominador: 5 }, { numerador: 2, denominador: 7 })
     assert.deepEqual(resultado, { numerador: 21, denominador: 10 })
   })

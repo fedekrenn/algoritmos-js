@@ -44,8 +44,8 @@ function findJavaScriptReduce (matrix) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Find JavaScript', function () {
-  it('Test 1', function () {
+describe('Find JavaScript', () => {
+  it('Test 1', () => {
     const test1 = [
       ['HTML', 'CSS', 'JavaScript'],
       ['Java', 'C++', 'Python'],
@@ -56,7 +56,7 @@ describe('Find JavaScript', function () {
     assert.deepEqual(findJavaScriptReduce(test1), [0, 2])
   })
 
-  it('Test 2', function () {
+  it('Test 2', () => {
     const test2 = [
       ['HTML', 'CSS', 'JS'],
       ['Java', 'C++', 'Python'],
@@ -67,7 +67,7 @@ describe('Find JavaScript', function () {
     assert.deepEqual(findJavaScriptReduce(test2), [2, 1])
   })
 
-  it('Test 3', function () {
+  it('Test 3', () => {
     const test3 = [
       ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
       ['Java', 'C++', 'Python', 'C#', 'Swift'],
@@ -78,7 +78,7 @@ describe('Find JavaScript', function () {
     assert.deepEqual(findJavaScriptReduce(test3), [2, 4])
   })
 
-  it('Test 4', function () {
+  it('Test 4', () => {
     const test4 = [
       ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
       ['Java', 'C++', 'Python', 'C#', 'Swift'],
