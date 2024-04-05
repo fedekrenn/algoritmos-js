@@ -49,19 +49,20 @@ function convertToMorse (text) {
     0: '-----'
   }
 
-  const partial = text.toLowerCase().split(' ')
-  const final = []
+  const splitted = text.toLowerCase().split(' ')
+  const buffer = []
 
-  for (let i = 0; i < partial.length; i++) {
-    const memi = []
-    for (let j = 0; j < partial[i].length; j++) {
-      const fefo = dictionary[partial[i][j]]
-      memi.push(fefo)
+  for (let i = 0; i < splitted.length; i++) {
+    const word = []
+    for (let j = 0; j < splitted[i].length; j++) {
+      const character = splitted[i][j]
+      const convertedCharacter = dictionary[character]
+      word.push(convertedCharacter)
     }
-    final.push(memi.join(' '))
+    buffer.push(word.join(' '))
   }
 
-  return final.join('  ')
+  return buffer.join('  ')
 }
 
 // Test
