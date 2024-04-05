@@ -2,7 +2,6 @@
   "name": "algoritmos",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "cantidad-total-de-puntos.js",
   "scripts": {
     "test": "cd ejercicios && mocha $1"
