@@ -1,7 +1,7 @@
 /*
-Recibimos una matriz de cadenas de texto. Tenemos que localizar la posición de la palabra
-"JavaScript" en la matriz y devolver su posición como un array de dos elementos: el índice de
-la fila y el índice de la columna.
+* Recibimos una matriz de cadenas de texto. Tenemos que localizar la posición de la palabra
+* "JavaScript" en la matriz y devolver su posición como un array de dos elementos: el índice de
+* la fila y el índice de la columna.
 */
 
 function findJavaScript (matrix) {
@@ -39,53 +39,47 @@ function findJavaScriptReduce (matrix) {
   )
 }
 
-// TESTS
+// Tests
 
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Find JavaScript', () => {
-  it('Test 1', () => {
-    const test1 = [
-      ['HTML', 'CSS', 'JavaScript'],
-      ['Java', 'C++', 'Python'],
-      ['Ruby', 'Go', 'Swift']
-    ]
+describe('Find "JavaScript" word', () => {
+  const test1 = [
+    ['HTML', 'CSS', 'JavaScript'],
+    ['Java', 'C++', 'Python'],
+    ['Ruby', 'Go', 'Swift']
+  ]
 
+  const test2 = [
+    ['HTML', 'CSS', 'JS'],
+    ['Java', 'C++', 'Python'],
+    ['Ruby', 'JavaScript', 'Swift']
+  ]
+
+  const test3 = [
+    ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
+    ['Java', 'C++', 'Python', 'C#', 'Swift'],
+    ['Ruby', 'Rust', 'Lisp', 'Go', 'JavaScript']
+  ]
+
+  const test4 = [
+    ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
+    ['Java', 'C++', 'Python', 'C#', 'Swift'],
+    ['Ruby', 'Rust', 'Lisp', 'Go', 'Miau']
+  ]
+
+  it('Should return the position of the word "JavaScript" in the matrix using a for loop', () => {
     assert.deepEqual(findJavaScript(test1), [0, 2])
-    assert.deepEqual(findJavaScriptReduce(test1), [0, 2])
-  })
-
-  it('Test 2', () => {
-    const test2 = [
-      ['HTML', 'CSS', 'JS'],
-      ['Java', 'C++', 'Python'],
-      ['Ruby', 'JavaScript', 'Swift']
-    ]
-
     assert.deepEqual(findJavaScript(test2), [2, 1])
-    assert.deepEqual(findJavaScriptReduce(test2), [2, 1])
-  })
-
-  it('Test 3', () => {
-    const test3 = [
-      ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
-      ['Java', 'C++', 'Python', 'C#', 'Swift'],
-      ['Ruby', 'Rust', 'Lisp', 'Go', 'JavaScript']
-    ]
-
     assert.deepEqual(findJavaScript(test3), [2, 4])
-    assert.deepEqual(findJavaScriptReduce(test3), [2, 4])
+    assert.deepEqual(findJavaScript(test4), [-1, -1])
   })
 
-  it('Test 4', () => {
-    const test4 = [
-      ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
-      ['Java', 'C++', 'Python', 'C#', 'Swift'],
-      ['Ruby', 'Rust', 'Lisp', 'Go', 'Miau']
-    ]
-
-    assert.deepEqual(findJavaScript(test4), [-1, -1])
+  it('Should return the position of the word "JavaScript" in the matrix using reduce', () => {
+    assert.deepEqual(findJavaScriptReduce(test1), [0, 2])
+    assert.deepEqual(findJavaScriptReduce(test2), [2, 1])
+    assert.deepEqual(findJavaScriptReduce(test3), [2, 4])
     assert.deepEqual(findJavaScriptReduce(test4), [-1, -1])
   })
 })

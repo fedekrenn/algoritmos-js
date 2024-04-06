@@ -30,13 +30,13 @@ function calculateAverageGrades (students) {
   return averageGrades
 }
 
-// Pruebas
+// Tests
 
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Calcular promedios de estudiantes', () => {
-  it('Test 1', () => {
+describe('Calculate average grades', () => {
+  it('Should return the average grades of each student', () => {
     assert.deepEqual(
       calculateAverageGrades([
         { name: 'Alice', grades: [90, 95, 88] },
@@ -45,9 +45,6 @@ describe('Calcular promedios de estudiantes', () => {
       ]),
       { Alice: '91.00', Bob: '80.67', Charlie: '91.67' }
     )
-  })
-
-  it('Test 2', () => {
     assert.deepEqual(
       calculateAverageGrades([
         { name: 'Eve', grades: [100, 95, 98] },

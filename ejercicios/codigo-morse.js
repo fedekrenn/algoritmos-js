@@ -70,7 +70,7 @@ function convertToMorse (text) {
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Código Morse', () => {
+describe('Morser', () => {
   it('Should return a correct morse code', () => {
     assert.strictEqual(convertToMorse('Hola'), '.... --- .-.. .-', 'Primero')
     assert.strictEqual(convertToMorse('Esta es una prueba'), '. ... - .-  . ...  ..- -. .-  .--. .-. ..- . -... .-', 'Segundo')

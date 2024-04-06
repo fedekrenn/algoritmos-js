@@ -28,25 +28,16 @@ function findLargestNumber (matrix) {
   return largestNumber
 }
 
-// Pruebas
+// Tests
 
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Encontrar el número mayor en una matriz', () => {
-  it('Test 1', () => {
+describe('Find largest number in matrix', () => {
+  it('Should return the largest number in the matrix', () => {
     assert.equal(findLargestNumber([[3, 5, 2], [11, 9, 8], [7, 6, 4]]), 11)
-  })
-
-  it('Test 2', () => {
     assert.equal(findLargestNumber([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), 9)
-  })
-
-  it('Test 3', () => {
     assert.equal(findLargestNumber([[17, 23], [42, 3], [7, 8, 19]]), 42)
-  })
-
-  it('Test 4', () => {
     assert.equal(findLargestNumber([[-1, -2, -3], [-4, -5, -6], [-7, -8, -9]]), -1)
   })
 })

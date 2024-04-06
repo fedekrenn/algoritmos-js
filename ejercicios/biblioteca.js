@@ -27,20 +27,12 @@ const assert = chai.assert
 
 describe('Min and max word', () => {
   const test1 = [999, 255, 121]
-
-  it('Test 1', () => {
-    assert.deepEqual(minAndMaxWord(test1), [2, 0])
-  })
-
   const test2 = [2, 1, 3, 4, 5, 6, 7, 8, 9]
-
-  it('Test 2', () => {
-    assert.deepEqual(minAndMaxWord(test2), [1, 8])
-  })
-
   const test3 = [5, 10, 15, 20]
 
-  it('Test 3', () => {
+  it('should return the index of the min and max word', () => {
+    assert.deepEqual(minAndMaxWord(test1), [2, 0])
+    assert.deepEqual(minAndMaxWord(test2), [1, 8])
     assert.deepEqual(minAndMaxWord(test3), [0, 3])
   })
 })

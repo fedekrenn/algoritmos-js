@@ -15,28 +15,17 @@ function isAnagram (string1, string2) {
   return firstWord.join('') === secondWord.join('')
 }
 
-// Test
+// Tests
+
 const chai = require('chai')
 const assert = chai.assert
 
 describe('Anagram', () => {
-  it('Test 1', () => {
+  it('should return true if two words are anagrams', () => {
     assert.deepEqual(isAnagram('hello', 'llohe'), true)
-  })
-
-  it('Test 2', () => {
     assert.deepEqual(isAnagram('hello', 'helo'), false)
-  })
-
-  it('Test 3', () => {
     assert.deepEqual(isAnagram('hello', 'hello'), false)
-  })
-
-  it('Test 4', () => {
     assert.deepEqual(isAnagram('rata', 'tara'), true)
-  })
-
-  it('Test 5', () => {
     assert.deepEqual(isAnagram('anagram', 'nagaram'), true)
   })
 })

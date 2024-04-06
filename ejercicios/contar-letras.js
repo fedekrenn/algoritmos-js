@@ -20,21 +20,15 @@ function countLetters (str) {
   }, {})
 }
 
-// Pruebas
+// Tests
 
 const chai = require('chai')
 const assert = chai.assert
 
-describe('Contar letras en una cadena', () => {
-  it('Test 1', () => {
+describe('Count letters of string', () => {
+  it('Should return the amount of times each letter appears in the string', () => {
     assert.deepEqual(countLetters('hello'), { h: 1, e: 1, l: 2, o: 1 })
-  })
-
-  it('Test 2', () => {
     assert.deepEqual(countLetters('programming'), { p: 1, r: 2, o: 1, g: 2, a: 1, m: 2, i: 1, n: 1 })
-  })
-
-  it('Test 3', () => {
     assert.deepEqual(countLetters('javascript'), { j: 1, a: 2, v: 1, s: 1, c: 1, r: 1, i: 1, p: 1, t: 1 })
   })
 })

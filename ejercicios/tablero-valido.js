@@ -61,12 +61,12 @@ const invalidBoard = [
   [0, 0, 0, 0, 8, 0, 0, 8, 9] // Se repite el número 8 en la última fila
 ]
 
-describe('Verificando el tablero', () => {
-  it('Tablero válido', () => {
+describe('Valid board', () => {
+  it('Should return true if the board is valid', () => {
     assert.deepEqual(isValidBoard(validBoard), true)
   })
 
-  it('Tablero inválido', () => {
+  it('Should return false if the board is invalid', () => {
     assert.deepEqual(isValidBoard(invalidBoard), false)
   })
 })

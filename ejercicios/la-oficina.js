@@ -1,13 +1,17 @@
 /*
-Tus colegas han estado mirando por encima de tu hombro. Cuando deberías haber estado haciendo tu aburrido trabajo real, has estado usando las computadoras de trabajo para pasar horas interminables en CodeWars.
-
-En una reunión de equipo, una persona declara al grupo que no estás trabajando. Estás en problemas. Rápidamente tienes que evaluar el ambiente en la habitación para decidir si debes recoger tus cosas y marcharte.
-
-Dado un objeto (meet) que contiene nombres de miembros del equipo como claves y su calificación de felicidad de 1 a 10 como valor, debes evaluar la calificación general de felicidad del grupo. Si es <= 5, devuelve '¡Sal ahora mismo!'. De lo contrario, devuelve '¡Buen trabajo, campeón!'.
-
-La calificación de felicidad será la puntuación total dividida por el número de personas en la habitación.
-
-Ten en cuenta que tu jefe está en la habitación (boss), su puntuación vale el doble de su valor nominal (pero sigue siendo solo una persona).
+* Tus colegas han estado mirando por encima de tu hombro. Cuando deberías haber
+* estado haciendo tu aburrido trabajo real, has estado usando las computadoras de
+* trabajo para pasar horas interminables en CodeWars.
+* En una reunión de equipo, una persona declara al grupo que no estás trabajando.
+* Estás en problemas. Rápidamente tienes que evaluar el ambiente en la habitación
+* para decidir si debes recoger tus cosas y marcharte.
+* Dado un objeto (meet) que contiene nombres de miembros del equipo como claves y
+* su calificación de felicidad de 1 a 10 como valor, debes evaluar la calificación
+* general de felicidad del grupo. Si es <= 5, devuelve '¡Sal ahora mismo!'. De lo
+* contrario, devuelve '¡Buen trabajo, campeón!'.
+* La calificación de felicidad será la puntuación total dividida por el número de
+* personas en la habitación. Ten en cuenta que tu jefe está en la habitación (boss),
+* su puntuación vale el doble de su valor nominal (pero sigue siendo solo una persona).
 */
 
 function outed (meet, boss) {
@@ -20,14 +24,13 @@ function outed (meet, boss) {
   return sum / arrOfMates.length >= 5 ? 'Nice Work Champ!' : 'Get Out Now!'
 }
 
-// TESTS
+// Tests
 
 const chai = require('chai')
 const assert = chai.assert
-chai.config.truncateThreshold = 0
 
-describe('Example tests', () => {
-  it('Should pass Example tests', () => {
+describe('The Office', () => {
+  it('Should return the message to the team', () => {
     assert.strictEqual(
       outed(
         {
