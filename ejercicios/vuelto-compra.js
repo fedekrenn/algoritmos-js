@@ -13,7 +13,8 @@ function calculateChange (ammount) {
 
   while (change > 0) {
     const index = bills.findIndex((num) => num > change)
-    const maxNum = bills[index - 1]
+    const maxNum = index === -1 ? bills.at(-1) : bills[index - 1]
+
     buffer.push(maxNum)
     change -= maxNum
   }
@@ -32,5 +33,7 @@ describe('Calculate change', () => {
     assert.deepEqual(calculateChange(300), [100, 100, 100])
     assert.deepEqual(calculateChange(10), [10])
     assert.deepEqual(calculateChange(44), [20, 20, 2, 2])
+    assert.deepEqual(calculateChange(1200), [1000, 100, 100])
+    assert.deepEqual(calculateChange(2222), [1000, 1000, 100, 100, 20, 2])
   })
 })
