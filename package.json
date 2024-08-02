@@ -19,9 +19,6 @@
     "globals": {
       "describe": "readonly",
       "it": "readonly"
-    },
-    "rules": {
-      "eqeqeq": "off"
     }
   },
   "dependencies": {
