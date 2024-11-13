@@ -12,7 +12,7 @@ function findPalindromicSubstrings (string) {
   const partial = [...string.trim().toLowerCase()]
 
   for (let i = 0; i <= partial.length; i++) {
-    if (partial.toString() == partial.toReversed() && partial.length >= 3) {
+    if (partial.toString() === partial.toReversed() && partial.length >= 3) {
       buffer.push(partial.join(''))
     }
 

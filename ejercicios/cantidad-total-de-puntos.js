@@ -19,7 +19,7 @@ function points (games) {
     const result = game.split(':')
     if (result[0] > result[1]) {
       return acc + 3
-    } else if (result[0] == result[1]) {
+    } else if (result[0] === result[1]) {
       return acc + 1
     } else {
       return acc

@@ -7,7 +7,7 @@ function convertToBinary (decimal) {
   let number = decimal
   let binary = ''
 
-  while (number != 0) {
+  while (number !== 0) {
     const reminder = number % 2
     number = Math.floor(number / 2)
     binary = reminder + binary

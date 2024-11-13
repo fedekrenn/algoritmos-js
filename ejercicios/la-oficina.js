@@ -18,7 +18,7 @@ function outed (meet, boss) {
   const arrOfMates = Object.entries(meet)
 
   const sum = arrOfMates.reduce((acc, mate) => {
-    return mate[0] == boss ? (acc += mate[1] * 2) : (acc += mate[1])
+    return mate[0] === boss ? (acc += mate[1] * 2) : (acc += mate[1])
   }, 0)
 
   return sum / arrOfMates.length >= 5 ? 'Nice Work Champ!' : 'Get Out Now!'
